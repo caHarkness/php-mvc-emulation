@@ -10,7 +10,7 @@
 	// Navigate to the home view if
 	// No view or parameters are passed
 	if ($arrParameters[0] == "")
-		header("Location: view/home");
+		header("Location: http://git.caharkness.com/php-mvc-emulation/view/home");
 
 	// NOTE: Since the home view does not exist,
 	// The logic in "index.php" will redirect you

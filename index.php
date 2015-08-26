@@ -40,7 +40,7 @@
 			{
 				// NOTE: If "404.php" does not exist in the "view"
 				// Folder, there will be an endless redirect loop!
-				header("Location: view/404");
+				header("Location: http://git.caharkness.com/php-mvc-emulation/view/404");
 			}
 		?>
 
