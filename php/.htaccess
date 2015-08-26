@@ -1,0 +1,5 @@
+# Deny all access to this PHP folder.
+# We don't want people sniffing around
+# For security flaws!
+
+Deny from all
