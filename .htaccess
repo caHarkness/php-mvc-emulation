@@ -1,8 +1,3 @@
-# This ".htaccess" is CRUCIAL for the MVC
-# Fashioned site. This file passes everything
-# In the URI after the top-level domain to
-# "index.php"
-
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

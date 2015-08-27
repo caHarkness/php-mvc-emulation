@@ -1,18 +1,19 @@
 <?php
-	// This "init.php" script gets called per every request,
-	// Be careful what you call here!
+	$arrParameters = explode(
+		"/",
+		substr($_GET["data"], 1)
+	);
 
-	// This line is important!
-	// We will divy up the GET uri to process
-	// Parameters in an MVC like fashion.
-	$arrParameters = explode("/", substr($_GET["data"], 1));
+	$arrDirectory = scandir("lib");
+	unset($arrDirectory[0]);
+	unset($arrDirectory[1]);
+	$arrDirectory = array_values($arrDirectory);
 
-	// Navigate to the home view if
-	// No view or parameters are passed
-	if ($arrParameters[0] == "")
-		header("Location: http://git.caharkness.com/php-mvc-emulation/view/home");
-
-	// NOTE: Since the home view does not exist,
-	// The logic in "index.php" will redirect you
-	// To "/view/404".
+	foreach ($arrDirectory as $strFile)
+		if (preg_match("#[A-Za-z0-9_\-]*.php#", $strFile))
+		{
+			// Require or insert the PHP code
+			// From the specific file here
+			require "lib/$strFile";
+		}
 ?>
