@@ -8,8 +8,26 @@
 				$arrParameters[0] . "/" .
 				$arrParameters[1] . ".php";
 
-			if (file_exists($strFile))	{ require $strFile; }
-			else						{ throw new Exception(); }
+			if (file_exists($strFile)) { require $strFile; }
+			else
+			{
+				$strFile =
+					"pages/" . 
+					$arrParameters[0] .
+					"/index.php";
+
+				if (file_exists($strFile)) { require $strFile; }
+				else
+				{
+					$strFile =
+						"pages/" . 
+						$arrParameters[0] .
+						".php";
+
+					if (file_exists($strFile))	{ require $strFile; }
+					else						{ throw new Exception(); }
+				}
+			}
 		}
 		else if (count($arrParameters) == 1)
 		{
@@ -18,8 +36,17 @@
 				$arrParameters[0] .
 				"/index.php";
 
-			if (file_exists($strFile))	{ require $strFile; }
-			else						{ throw new Exception(); }
+			if (file_exists($strFile)) { require $strFile; }
+			else
+			{
+				$strFile =
+					"pages/" . 
+					$arrParameters[0] .
+					".php";
+
+				if (file_exists($strFile))	{ require $strFile; }
+				else						{ throw new Exception(); }
+			}
 		}
 		else
 		{
@@ -29,6 +56,7 @@
 	}
 	catch (Exception $x)
 	{
+		header("Location: " . SITE_ROOT . "error/404");
 		exit;
 	}
 ?>

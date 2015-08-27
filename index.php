@@ -1,4 +1,5 @@
 <?php
+	require "php/config.php";
 	require "php/init.php";
 ?>
 
