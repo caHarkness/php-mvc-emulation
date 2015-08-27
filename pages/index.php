@@ -1,5 +1,2 @@
-<div class="padded width-constraint">
-<h1>You made it!</h1>
-
-<p>There are no pages yet, but you made it!</p>
-</div>
+<h3>About</h3>
+<p>This project exists as a template for PHP programmers to adapt Microsoft's MVC design philosophy in their own work. While not necessarily split into models, views, and controllers, php-mvc-emulation handles the entire GET uri and compiles a page based on the request. The php-mvc-emulation logic looks for either files and folders located in the <pre>pages</pre> folder, and passes additional parameters- delimited by <pre>/</pre>- in the address bar.</p>
