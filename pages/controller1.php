@@ -1,0 +1,2 @@
+<h3>Controller 1</h3>
+<p>This is a single file controller. When php-mvc-emulation cannot locate a folder's <i>index.php</i> or any of its actions, php-mvc-emulation will look for a single PHP file with the corresponding name.</p>
