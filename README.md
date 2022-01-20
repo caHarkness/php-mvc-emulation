@@ -1,1 +1,3 @@
-![php-mvc-emulation](preview.png)
+# api-example
+
+This branch differs from `master` as it's far more modern and demonstrates a semi-RESTful API that takes input and is capable of producing JSON output (among other types of responses). Take a look at how the `lib` folder is implemented and how what are essentially modules are loaded. Then take a look at the `pages` folder, the controllers, and the actions in the controllers to see how they respond to requests!
