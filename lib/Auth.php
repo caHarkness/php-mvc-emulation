@@ -3,29 +3,32 @@
     {
         public static function getUser()
         {
-            return
-            $_SERVER["PHP_AUTH_USER"];
+            $strToken = Cookie::get("Token");
+            $varRows = Database::query("sp_GetUserFromToken.sql", $strToken);
+
+            if (count($varRows) > 0)
+                return $varRows[0];
+            else
+            return null;
         }
 
-        public static function getPassword()
+        public static function getUserFromEmail($strEmail)
         {
-            return
-            $_SERVER["PHP_AUTH_PW"];
+            $varRows = Database::query("select * from `user` where `email` like ? limit 1", $strEmail);
+
+            if (count($varRows) > 0)
+                return $varRows[0];
+            else
+            return null;
         }
 
-        public static function getKey() { return Auth::getUser(); }
-        public static function getSecret() { return Auth::getPassword(); }
-
-        public static function isAuthenticated()
+        public static function filter()
         {
-            //
-            //  Replace with SQL
-            //
-
-            if (Auth::getUser() == "conner" && Auth::getPassword("badpassword"))
-                return true;
-
-            return false;
+            if (self::getUser() == null)
+            {
+                header("Location: " . ADDRESS . "/user/login");
+                Cookie::set("AlertDanger", "You need to be signed in to access that page.");
+            }
         }
     }
 ?>

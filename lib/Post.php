@@ -6,6 +6,9 @@
         //
         public static function has()
         {
+            if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] != "POST")
+                return false;
+
             if (func_num_args() > 0)
             {
                 foreach (func_get_args() as $strKey)

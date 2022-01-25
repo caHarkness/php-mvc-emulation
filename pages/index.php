@@ -1,2 +1,10 @@
-<h3>About</h3>
-<p>This project exists as a template for PHP programmers to implement something similar to Microsoft's MVC design philosophy in their own work. While not necessarily split into models, views, and controllers, php-mvc-emulation handles the entire GET uri and compiles a page based on the request. The `php-mvc-emulation` logic looks for either files and folders located in the <i>pages</i> folder, and passes additional parameters&mdash;delimited by forward slashes&mdash;in the address bar.</p>
+<div class="row">
+    <div class="col-sm-4"></div>
+
+    <div class="col-sm-4">
+        <h3>Home</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+
+    <div class="col-sm-4"></div>
+</div>

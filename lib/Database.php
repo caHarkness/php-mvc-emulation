@@ -1,6 +1,6 @@
 <?php
     define("DATABASE_FILE_NAME", "master.db");
-    define("DATABASE_DIRECTORY", "/var/www/api.caharkness.com/db");
+    define("DATABASE_DIRECTORY", "/var/www/dev.caharkness.com/db");
 
     class Database
     {
@@ -42,4 +42,9 @@
             array_values($output);
         }
     }
+
+    //
+    //  Remember to install php7.4-sqlite and enable the pdo_sqlite extension in the php.ini config
+    //
+    Database::query("sp_CreateUserTable.sql");
 ?>
