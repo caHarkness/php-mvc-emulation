@@ -1,3 +1,3 @@
-# api-example
+# bootstrap-sqlite
 
-This branch differs from `master` as it's far more modern and demonstrates a semi-RESTful API that takes input and is capable of producing JSON output (among other types of responses). Take a look at how the `lib` folder is implemented and how what are essentially modules are loaded. Then take a look at the `pages` folder, the controllers, and the actions in the controllers to see how they respond to requests!
+This serves as an example of how to build a Bootstrap 4 site over the contents of the `api-example` branch, complete with a SQLite PDO login system.
